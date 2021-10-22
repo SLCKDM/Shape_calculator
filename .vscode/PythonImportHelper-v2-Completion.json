@@ -1,0 +1,223 @@
+[
+    {
+        "label": "*",
+        "importPath": "shapes",
+        "description": "shapes",
+        "isExtraImport": true,
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "shapes",
+        "description": "shapes",
+        "isExtraImport": true,
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "shapes",
+        "description": "shapes",
+        "isExtraImport": true,
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "interface",
+        "description": "interface",
+        "isExtraImport": true,
+        "detail": "interface",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "AdventureDone",
+        "kind": 6,
+        "importPath": "interface",
+        "description": "interface",
+        "peekOfCode": "class AdventureDone(Exception):\n    \"\"\" Excerption that let us close program \"\"\"\n    pass\nclass Main():\n    \"\"\" This class represents user interface\n    Methods:\n        shape_ind_choice(): select the shape_ind to be calculated from\n        operation_choice(): choose operation that will be calculated\n        attributes_input(): initial values, which will be used in calculations\n        process() : makes logic",
+        "detail": "interface",
+        "documentation": {}
+    },
+    {
+        "label": "Main",
+        "kind": 6,
+        "importPath": "interface",
+        "description": "interface",
+        "peekOfCode": "class Main():\n    \"\"\" This class represents user interface\n    Methods:\n        shape_ind_choice(): select the shape_ind to be calculated from\n        operation_choice(): choose operation that will be calculated\n        attributes_input(): initial values, which will be used in calculations\n        process() : makes logic\n    Raises:\n        AdventureDone: if user input contains \"close\" - terminate process\n    \"\"\"",
+        "detail": "interface",
+        "documentation": {}
+    },
+    {
+        "label": "Shape",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Shape:\n    \"\"\" class that represent shape and which is the parent for flat and volumeric shapes\n    \"\"\"\n    _title = \"Shape\"\n    _shapes = []\n    def area(self):\n        \"\"\"method for all shapes that calculate area\"\"\"\n        return NotImplemented\nclass Flat(Shape):\n    \"\"\"Shape subclass, which is parent for such shapes as:",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Flat",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Flat(Shape):\n    \"\"\"Shape subclass, which is parent for such shapes as:\n    Circle, Square, Rhoumbus, Rectangle, Trapezoid, Triangle\n    \"\"\"\n    _title = \"Flat shape\"\n    def perimeter(self):\n        \"\"\"specific method for flat shapes that calculate perimeter of the Flat shapes\"\"\"\n        return NotImplemented\nclass Volumetric(Shape):\n    \"\"\"sphere, cube, parallelepiped, pyramid, cylinder, cone\"\"\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Volumetric",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Volumetric(Shape):\n    \"\"\"sphere, cube, parallelepiped, pyramid, cylinder, cone\"\"\"\n    _title = \"Volumetric shape\"\n    def volume(self):\n        \"\"\"specific method for volumeric shapes of the Volumeric shapes\"\"\"\n        return NotImplemented\nclass Circle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        radius (int): arg which is needed to calculate area, perimeter and diameter of the Circle",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Circle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        radius (int): arg which is needed to calculate area, perimeter and diameter of the Circle\n    Methods:\n        area: calculate area of the circle (r^2 * pi)\n        perimeter: calculate perimeter of the circle (2 * pi * r)\n        diameter: calculate diameter of the circle (r * 2)\n    \"\"\"\n    _title = \"Circle\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Square",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Square(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a (int): side of the square. Arg which is needed to calculate area, perimeter and diagonal of the Square\n    Methods:\n        area: calculate area of the square (a^2)\n        perimeter: calculate perimeter of the square (a * 4)\n        diagonal: calculate diameter of the square (a * sqrt(2))\n    \"\"\"\n    _title = \"Square\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Rhombus",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Rhombus(Square):\n    \"\"\"Flat shape subclass\n    Args:\n        a (int): side of the rhombus\n        height (int): of the rhombus\n    Methods:\n        area: calculate area of the rhombus (a * height)\n        perimeter: calculate perimeter of the rhombus (a * 4)\n        diagonal: calculate diameter of the rhombus (a * sqrt(2))\n    \"\"\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Rectangle",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Rectangle(Square):\n    \"\"\"Flat shape subclass\n    Args:\n        a|b (int): sides of the rectangle\n    Methods:\n        area: calculate area of the rectangle (a * b)\n        perimeter: calculate perimeter of the rectangle (a * 2 + b * 2)\n        diagonal: calculate diameter of the rectangle (a * sqrt(2))\n    \"\"\"\n    _title = \"Rectangle\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Trapezoid",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Trapezoid(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a|b|c|d (int): sides of the trapezoid\n        height (int): height of the trapezoid\n    Methods:\n        area: calculate area of the trapezoid (mid_line * height)\n        perimeter: calculate perimeter of the trapezoid (a + b + c + d)\n        mid_line: calculate middle line of the trapezoid ((a+b)/2)\n    \"\"\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Triangle",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Triangle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a|b|c (int): sides of the triangle\n    Methods:\n        area: calculate area of the triangle (1/2 * c * height)\n        perimeter: calculate perimeter of the triangle (a + b + c)\n        height: calculate height of the triangle ((2*sqrt(p(p-a)*(p-b)(p-c)))/2)\n    \"\"\"\n    _title = \"Triangle\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Sphere",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Sphere(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        radius (int): radius of the sphere\n    Methods:\n        area(): calculate area of the sphere (4 * pi * radius^2)\n        volume(): calculate volume of the sphere (4/3 * pi * radius^3)\n        diameter(): calculate radius of the sphere (radius*2)\n    \"\"\"\n    _title = \"Sphere\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Cube",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Cube(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        a (int): side of the cube\n    Methods:\n        area(): calculate area of the cube (6 * a^2)\n        volume(): calculate volume of the cube (a^3)\n        diagonal(): calculate diagonal of the cube (sqrt(3)*a)\n    \"\"\"\n    _title = \"Cube\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Parallelepiped",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Parallelepiped(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        a|b|c (int): sides of the  parallelepiped\n    Methods:\n        area(): calculate area of the parallelepiped (2(a * b + b * c + a * c))\n        volume(): calculate volume of the parallelepiped (a * b * c)\n        diagonal(): calculate diagonal of the parallelepiped (a^2 + b^2 + c^2)\n    \"\"\"\n    _title = \"Parallelepiped\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Pyramid",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Pyramid(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        edge (int): sides of the pyramid\n        radius (int): sides of the pyramid\n        *sides (int): sides of the pyramid\n    Methods:\n        area(): calculate area of the pyramid (n * a/2 * apothema)\n        volume(): calculate volume of the pyramid ()\n        height(): calculate height of the pyramid (sqrt(edge^2 - radius^2))",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Cylinder",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Cylinder(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        radius (int): sides of the cylinder\n        height (int): sides of the cylinder\n    Methods:\n        area(): calculate area of the cylinder (2 * pi * radius * height)\n        volume(): calculate volume of the cylinder (base_area * height)\n    \"\"\"\n    _title = \"Cylinder\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "Cone",
+        "kind": 6,
+        "importPath": "shapes",
+        "description": "shapes",
+        "peekOfCode": "class Cone(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        radius (int): sides of the cone\n        height (int): sides of the cone\n    Methods:\n        area(): calculate area of the cone (pi * radius * (radius * slant_height))\n        volume(): calculate volume of the cone (1/3 * pi * radius^2 * height)\n    \"\"\"\n    _title = \"Cone\"",
+        "detail": "shapes",
+        "documentation": {}
+    },
+    {
+        "label": "UnitTests",
+        "kind": 6,
+        "importPath": "test_flat",
+        "description": "test_flat",
+        "peekOfCode": "class UnitTests(unittest.TestCase):\n    global flat_shapes\n    flat_shapes = [Circle, Square, Rhombus,\n                   Rectangle, Trapezoid, Triangle]\n    def setUp(self):\n        \"\"\" Setup values for shapes \"\"\"\n        self.circle = Circle(5)\n        self.square = Square(10)\n        self.rhombus = Rhombus(9, 3)\n        self.rectangle = Rectangle(5, 4)",
+        "detail": "test_flat",
+        "documentation": {}
+    },
+    {
+        "label": "UnitTests",
+        "kind": 6,
+        "importPath": "test_volumetric",
+        "description": "test_volumetric",
+        "peekOfCode": "class UnitTests(unittest.TestCase):\n    global volumetric_shapes\n    volumetric_shapes = [Sphere, Cube, Parallelepiped,\n                         Pyramid, Cylinder, Cone]\n    def setUp(self):\n        \"\"\" Setup values for shapes \"\"\"\n        self.sphere = Sphere(10)\n        self.cube = Cube(5)\n        self.parallelepiped = Parallelepiped(4, 5, 6)\n        self.pyramid = Pyramid(5, 4, 2)",
+        "detail": "test_volumetric",
+        "documentation": {}
+    }
+]
