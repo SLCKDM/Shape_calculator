@@ -2,7 +2,8 @@ import math
 
 
 class Shape:
-    """ class that represent shape and which is the parent for flat and volumeric shapes
+    """ class that represent shape and which is
+    the parent for flat and volumeric shapes
     """
     _title = "Shape"
     _shapes = []
@@ -19,7 +20,8 @@ class Flat(Shape):
     _title = "Flat shape"
 
     def perimeter(self):
-        """specific method for flat shapes that calculate perimeter of the Flat shapes"""
+        """specific method for flat shapes that
+        calculate perimeter of the Flat shapes"""
         return NotImplemented
 
 
@@ -36,7 +38,8 @@ class Circle(Flat):
     """Flat shape subclass
 
     Args:
-        radius (int): arg which is needed to calculate area, perimeter and diameter of the Circle
+        radius (int): arg which is needed to calculate
+        area, perimeter and diameter of the Circle
 
     Methods:
         area: calculate area of the circle (r^2 * pi)
@@ -64,7 +67,8 @@ class Square(Flat):
     """Flat shape subclass
 
     Args:
-        a (int): side of the square. Arg which is needed to calculate area, perimeter and diagonal of the Square
+        a (int): side of the square. Arg which is needed to
+        calculate area, perimeter and diagonal of the Square
 
     Methods:
         area: calculate area of the square (a^2)
@@ -177,7 +181,7 @@ class Triangle(Flat):
     Methods:
         area: calculate area of the triangle (1/2 * c * height)
         perimeter: calculate perimeter of the triangle (a + b + c)
-        height: calculate height of the triangle ((2*sqrt(p(p-a)*(p-b)(p-c)))/2)
+        height: calculate height of the triangle (2*sqrt(p(p-a)*(p-b)(p-c)))/2
     """
     _title = "Triangle"
 
@@ -201,7 +205,8 @@ class Triangle(Flat):
     @property
     def height(self):
         """ return height of the shape """
-        return (2*math.sqrt(self._p*(self._p-self.a)*(self._p-self.b)*(self._p-self.c)))/self.c
+        p = self._p
+        return (2*math.sqrt(p*(p-self.a)*(p-self.b)*(p-self.c)))/self.c
 
 
 class Sphere(Volumetric):
@@ -305,7 +310,8 @@ class Pyramid(Volumetric):
         area(): calculate area of the pyramid (n * a/2 * apothema)
         volume(): calculate volume of the pyramid ()
         height(): calculate height of the pyramid (sqrt(edge^2 - radius^2))
-        apothema(): calculate apothema of the pyramid (sqrt(height+(a/(2*tan(180/n)))^2))
+        apothema(): calculate apothema of the pyramid
+        (sqrt(height+(a/(2*tan(180/n)))^2))
     """
     _title = "Pyramid"
 
@@ -369,9 +375,9 @@ class Cylinder(Volumetric):
         self.height = height
 
     def area(self, __side: bool = None):
-        """ calculate and return area of the cylinder 
+        """ calculate and return area of the cylinder
 
-        __side=True to calculate side area of the cylinder 
+        __side=True to calculate side area of the cylinder
         """
         if __side:
             return 2 * math.pi * self.radius*self.height
@@ -391,7 +397,7 @@ class Cone(Volumetric):
         height (int): sides of the cone
 
     Methods:
-        area(): calculate area of the cone (pi * radius * (radius * slant_height))
+        area(): calculate area of the cone (pi * radius * (radius * slant_h))
         volume(): calculate volume of the cone (1/3 * pi * radius^2 * height)
     """
     _title = "Cone"

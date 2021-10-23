@@ -1,4 +1,4 @@
-from shapes import *
+import shapes as sh
 
 
 class AdventureDone(Exception):
@@ -19,8 +19,10 @@ class Main():
         AdventureDone: if user input contains "close" - terminate process
     """
 
-    shape_inds = [Circle, Square, Rhombus, Rectangle, Trapezoid,
-                  Triangle, Sphere, Cube, Parallelepiped, Pyramid, Cylinder, Cone]
+    shape_inds = [sh.Circle, sh.Square, sh.Rhombus,
+                  sh.Rectangle, sh.Trapezoid, sh.Triangle,
+                  sh.Sphere, sh.Cube, sh.Parallelepiped,
+                  sh.Pyramid, sh.Cylinder, sh.Cone]
 
     attr_dict = {
         'Circle': 'radius',
@@ -50,38 +52,44 @@ class Main():
 
     def operation_choice(self, shape_ind: int):
         """ return string of code that will be executed
-        shape_ind: ind 
+        shape_ind: ind
         """
         method_list = [method for method in dir(
-            self.shape_inds[shape_ind]) if method.startswith('__' and '_') is False]
+            self.shape_inds[shape_ind])
+            if method.startswith('__' and '_') is False]
         for ind, method in enumerate(method_list):
             print(f'\n{ind}. {method}', end='')
         operation_input = input(
-            f'\nWhich operation you want to calculate to {self.shape_inds[shape_ind]._title.lower()}?\n')
+            f'\nWhich operation you want to calculate to \
+            {self.shape_inds[shape_ind]._title.lower()}?\n')
         if operation_input == "close":
             raise AdventureDone
         else:
-            return f'{self.shape_inds[shape_ind].__name__}{self.attributes_input(shape_ind)}.{method_list[int(operation_input)]}()'
+            return f'{self.shape_inds[shape_ind].__name__} \
+                    {self.attributes_input(shape_ind)}.    \
+                    {method_list[int(operation_input)]}()'
 
     def attributes_input(self, shape_ind: int):
-        """ asks the user to enter values that will be used as attributes in shape class.
+        """ asks the user to enter values that
+        will be used as attributes in shape class.
         Return attributes tuple
         """
         print(
-            f"Enter the following values ​​with spaces in between: {self.attr_dict[self.shape_inds[shape_ind].__name__]}")
+            f"Enter the following values ​​with spaces in between:  \
+            {self.attr_dict[self.shape_inds[shape_ind].__name__]}")
         attr_input = input('(Example: X Y Z): ')
         if attr_input.strip() == "close":
             raise AdventureDone
         return tuple(map(int, attr_input.split(' ')))
 
     def process(self):
-        """ make stupid, but logic of this programm 
+        """ make stupid, but logic of this programm
         First, it asks to enter which figure the user is interested in
         Secondly, it asks you to enter the operation that needs to be performed
         Thirdly, it asks you to enter the initial data for the calculation
         And then the user gets the result.
         Any time user can enter 'close' in input and process will be terminated
-        Also, if user enters something incorrectly, programm tells about it and 
+        Also, if user enters something incorrectly, programm tells about it and
         it does not give a result
         """
         while True:
