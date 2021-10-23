@@ -1,25 +1,10 @@
 [
     {
-        "label": "*",
+        "label": "shapes",
+        "kind": 6,
+        "isExtraImport": true,
         "importPath": "shapes",
         "description": "shapes",
-        "isExtraImport": true,
-        "detail": "shapes",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "shapes",
-        "description": "shapes",
-        "isExtraImport": true,
-        "detail": "shapes",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "shapes",
-        "description": "shapes",
-        "isExtraImport": true,
         "detail": "shapes",
         "documentation": {}
     },
@@ -50,6 +35,48 @@
         "documentation": {}
     },
     {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Rectangle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Polygon",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
         "label": "AdventureDone",
         "kind": 6,
         "importPath": "interface",
@@ -72,7 +99,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Shape:\n    \"\"\" class that represent shape and which is the parent for flat and volumeric shapes\n    \"\"\"\n    _title = \"Shape\"\n    _shapes = []\n    def area(self):\n        \"\"\"method for all shapes that calculate area\"\"\"\n        return NotImplemented\nclass Flat(Shape):\n    \"\"\"Shape subclass, which is parent for such shapes as:",
+        "peekOfCode": "class Shape:\n    \"\"\" class that represent shape and which is\n    the parent for flat and volumeric shapes\n    \"\"\"\n    _title = \"Shape\"\n    _shapes = []\n    def area(self):\n        \"\"\"method for all shapes that calculate area\"\"\"\n        return NotImplemented\nclass Flat(Shape):",
         "detail": "shapes",
         "documentation": {}
     },
@@ -81,7 +108,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Flat(Shape):\n    \"\"\"Shape subclass, which is parent for such shapes as:\n    Circle, Square, Rhoumbus, Rectangle, Trapezoid, Triangle\n    \"\"\"\n    _title = \"Flat shape\"\n    def perimeter(self):\n        \"\"\"specific method for flat shapes that calculate perimeter of the Flat shapes\"\"\"\n        return NotImplemented\nclass Volumetric(Shape):\n    \"\"\"sphere, cube, parallelepiped, pyramid, cylinder, cone\"\"\"",
+        "peekOfCode": "class Flat(Shape):\n    \"\"\"Shape subclass, which is parent for such shapes as:\n    Circle, Square, Rhoumbus, Rectangle, Trapezoid, Triangle\n    \"\"\"\n    _title = \"Flat shape\"\n    def perimeter(self):\n        \"\"\"specific method for flat shapes that\n        calculate perimeter of the Flat shapes\"\"\"\n        return NotImplemented\nclass Volumetric(Shape):",
         "detail": "shapes",
         "documentation": {}
     },
@@ -90,7 +117,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Volumetric(Shape):\n    \"\"\"sphere, cube, parallelepiped, pyramid, cylinder, cone\"\"\"\n    _title = \"Volumetric shape\"\n    def volume(self):\n        \"\"\"specific method for volumeric shapes of the Volumeric shapes\"\"\"\n        return NotImplemented\nclass Circle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        radius (int): arg which is needed to calculate area, perimeter and diameter of the Circle",
+        "peekOfCode": "class Volumetric(Shape):\n    \"\"\"sphere, cube, parallelepiped, pyramid, cylinder, cone\"\"\"\n    _title = \"Volumetric shape\"\n    def volume(self):\n        \"\"\"specific method for volumeric shapes of the Volumeric shapes\"\"\"\n        return NotImplemented\nclass Circle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        radius (int): arg which is needed to calculate",
         "detail": "shapes",
         "documentation": {}
     },
@@ -99,7 +126,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Circle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        radius (int): arg which is needed to calculate area, perimeter and diameter of the Circle\n    Methods:\n        area: calculate area of the circle (r^2 * pi)\n        perimeter: calculate perimeter of the circle (2 * pi * r)\n        diameter: calculate diameter of the circle (r * 2)\n    \"\"\"\n    _title = \"Circle\"",
+        "peekOfCode": "class Circle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        radius (int): arg which is needed to calculate\n        area, perimeter and diameter of the Circle\n    Methods:\n        area: calculate area of the circle (r^2 * pi)\n        perimeter: calculate perimeter of the circle (2 * pi * r)\n        diameter: calculate diameter of the circle (r * 2)\n    \"\"\"",
         "detail": "shapes",
         "documentation": {}
     },
@@ -108,7 +135,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Square(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a (int): side of the square. Arg which is needed to calculate area, perimeter and diagonal of the Square\n    Methods:\n        area: calculate area of the square (a^2)\n        perimeter: calculate perimeter of the square (a * 4)\n        diagonal: calculate diameter of the square (a * sqrt(2))\n    \"\"\"\n    _title = \"Square\"",
+        "peekOfCode": "class Square(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a (int): side of the square. Arg which is needed to\n        calculate area, perimeter and diagonal of the Square\n    Methods:\n        area: calculate area of the square (a^2)\n        perimeter: calculate perimeter of the square (a * 4)\n        diagonal: calculate diameter of the square (a * sqrt(2))\n    \"\"\"",
         "detail": "shapes",
         "documentation": {}
     },
@@ -144,7 +171,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Triangle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a|b|c (int): sides of the triangle\n    Methods:\n        area: calculate area of the triangle (1/2 * c * height)\n        perimeter: calculate perimeter of the triangle (a + b + c)\n        height: calculate height of the triangle ((2*sqrt(p(p-a)*(p-b)(p-c)))/2)\n    \"\"\"\n    _title = \"Triangle\"",
+        "peekOfCode": "class Triangle(Flat):\n    \"\"\"Flat shape subclass\n    Args:\n        a|b|c (int): sides of the triangle\n    Methods:\n        area: calculate area of the triangle (1/2 * c * height)\n        perimeter: calculate perimeter of the triangle (a + b + c)\n        height: calculate height of the triangle (2*sqrt(p(p-a)*(p-b)(p-c)))/2\n    \"\"\"\n    _title = \"Triangle\"",
         "detail": "shapes",
         "documentation": {}
     },
@@ -198,7 +225,7 @@
         "kind": 6,
         "importPath": "shapes",
         "description": "shapes",
-        "peekOfCode": "class Cone(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        radius (int): sides of the cone\n        height (int): sides of the cone\n    Methods:\n        area(): calculate area of the cone (pi * radius * (radius * slant_height))\n        volume(): calculate volume of the cone (1/3 * pi * radius^2 * height)\n    \"\"\"\n    _title = \"Cone\"",
+        "peekOfCode": "class Cone(Volumetric):\n    \"\"\"Volumeric shape subclass\n    Args:\n        radius (int): sides of the cone\n        height (int): sides of the cone\n    Methods:\n        area(): calculate area of the cone (pi * radius * (radius * slant_h))\n        volume(): calculate volume of the cone (1/3 * pi * radius^2 * height)\n    \"\"\"\n    _title = \"Cone\"",
         "detail": "shapes",
         "documentation": {}
     },
@@ -207,7 +234,7 @@
         "kind": 6,
         "importPath": "test_flat",
         "description": "test_flat",
-        "peekOfCode": "class UnitTests(unittest.TestCase):\n    global flat_shapes\n    flat_shapes = [Circle, Square, Rhombus,\n                   Rectangle, Trapezoid, Triangle]\n    def setUp(self):\n        \"\"\" Setup values for shapes \"\"\"\n        self.circle = Circle(5)\n        self.square = Square(10)\n        self.rhombus = Rhombus(9, 3)\n        self.rectangle = Rectangle(5, 4)",
+        "peekOfCode": "class UnitTests(unittest.TestCase):\n    global flat_shapes\n    flat_shapes = [ts.Circle, ts.Square, ts.Rhombus,\n                   ts.Rectangle, ts.Trapezoid, ts.Triangle]\n    def setUp(self):\n        \"\"\" Setup values for shapes \"\"\"\n        self.circle = ts.Circle(5)\n        self.square = ts.Square(10)\n        self.rhombus = ts.Rhombus(9, 3)\n        self.rectangle = ts.Rectangle(5, 4)",
         "detail": "test_flat",
         "documentation": {}
     },
@@ -216,8 +243,89 @@
         "kind": 6,
         "importPath": "test_volumetric",
         "description": "test_volumetric",
-        "peekOfCode": "class UnitTests(unittest.TestCase):\n    global volumetric_shapes\n    volumetric_shapes = [Sphere, Cube, Parallelepiped,\n                         Pyramid, Cylinder, Cone]\n    def setUp(self):\n        \"\"\" Setup values for shapes \"\"\"\n        self.sphere = Sphere(10)\n        self.cube = Cube(5)\n        self.parallelepiped = Parallelepiped(4, 5, 6)\n        self.pyramid = Pyramid(5, 4, 2)",
+        "peekOfCode": "class UnitTests(unittest.TestCase):\n    global volumetric_shapes\n    volumetric_shapes = [ts.Sphere, ts.Cube, ts.Parallelepiped,\n                         ts.Pyramid, ts.Cylinder, ts.Cone]\n    def setUp(self):\n        \"\"\" Setup values for shapes \"\"\"\n        self.sphere = ts.Sphere(10)\n        self.cube = ts.Cube(5)\n        self.parallelepiped = ts.Parallelepiped(4, 5, 6)\n        self.pyramid = ts.Pyramid(5, 4, 2)",
         "detail": "test_volumetric",
+        "documentation": {}
+    },
+    {
+        "label": "square",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "square = sh.Square(4)\nax.add_patch(Rectangle((1, 1), square.a, square.a))\n# ! rhombus\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])\nsquare = sh.Square(4)\nax.add_patch(Rectangle((1, 1), square.a, square.a,angle=45))\n# !circle\nfig, ax = plt.subplots()\nax.plot([0, 0], [0, 0])",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "square",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "square = sh.Square(4)\nax.add_patch(Rectangle((1, 1), square.a, square.a,angle=45))\n# !circle\nfig, ax = plt.subplots()\nax.plot([0, 0], [0, 0])\ncircle = sh.Circle(3)\nax.add_patch(Circle((1,1), circle.radius))\n# !rectangle\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "circle",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "circle = sh.Circle(3)\nax.add_patch(Circle((1,1), circle.radius))\n# !rectangle\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])\nrectangle = sh.Rectangle(4, 7)\nax.add_patch(Rectangle((1, 1), rectangle.a, rectangle.b))\n# ! trapezoid\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "rectangle",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "rectangle = sh.Rectangle(4, 7)\nax.add_patch(Rectangle((1, 1), rectangle.a, rectangle.b))\n# ! trapezoid\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])\ntrapezoid = sh.Trapezoid(4, 6, 4, 6, 5)\nx = [1,2,6,5,1]\ny = [1,4,4,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\n# ! triangle",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "trapezoid",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "trapezoid = sh.Trapezoid(4, 6, 4, 6, 5)\nx = [1,2,6,5,1]\ny = [1,4,4,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\n# ! triangle\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])\nx = [1,3,5,1]\ny = [1,10,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "x = [1,2,6,5,1]\ny = [1,4,4,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\n# ! triangle\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])\nx = [1,3,5,1]\ny = [1,10,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\nplt.show()",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "y = [1,4,4,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\n# ! triangle\nfig, ax = plt.subplots()\nax.plot([0, 0],[0, 0])\nx = [1,3,5,1]\ny = [1,10,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\nplt.show()",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "x = [1,3,5,1]\ny = [1,10,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\nplt.show()",
+        "detail": "visual",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "visual",
+        "description": "visual",
+        "peekOfCode": "y = [1,10,1,1]\nax.add_patch(Polygon(xy=list(zip(x,y))))\nplt.show()",
+        "detail": "visual",
         "documentation": {}
     }
 ]
