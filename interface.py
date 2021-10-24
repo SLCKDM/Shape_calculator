@@ -23,10 +23,7 @@ class Main():
                   sh.Rectangle, sh.Trapezoid, sh.Triangle,
                   sh.Sphere, sh.Cube, sh.Parallelepiped,
                   sh.Pyramid, sh.Cylinder, sh.Cone]
-    # shape_inds = [Circle, Square, Rhombus,
-    #             Rectangle, Trapezoid, Triangle,
-    #             Sphere, Cube, Parallelepiped,
-    #             Pyramid, Cylinder, Cone]
+
     attr_dict = {
         'Circle': 'radius',
         'Square': 'side',
