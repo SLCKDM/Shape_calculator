@@ -99,6 +99,8 @@ class Main():
                 print(eval(operation))
             except IndexError:
                 print("Seems you entered something wrong, try again")
+            except TypeError:
+                print('Looks like you entered too many/few arguments')
             except AdventureDone:
                 break
 
