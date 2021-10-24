@@ -4,6 +4,7 @@ The implementation of the figures leaves much to be desired.  Basic operations w
 Please do not judge strictly, my brain flowed while I was writing this
 
 Project structure:
+
 • main.py - the file through which the program is launched.
 
 • interface.py - is a module for working with user input.
