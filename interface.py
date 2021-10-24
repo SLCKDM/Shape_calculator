@@ -23,7 +23,10 @@ class Main():
                   sh.Rectangle, sh.Trapezoid, sh.Triangle,
                   sh.Sphere, sh.Cube, sh.Parallelepiped,
                   sh.Pyramid, sh.Cylinder, sh.Cone]
-
+    # shape_inds = [Circle, Square, Rhombus,
+    #             Rectangle, Trapezoid, Triangle,
+    #             Sphere, Cube, Parallelepiped,
+    #             Pyramid, Cylinder, Cone]
     attr_dict = {
         'Circle': 'radius',
         'Square': 'side',
@@ -65,7 +68,7 @@ class Main():
         if operation_input == "close":
             raise AdventureDone
         else:
-            return f'{self.shape_inds[shape_ind].__name__} \
+            return f'sh.{self.shape_inds[shape_ind].__name__} \
                     {self.attributes_input(shape_ind)}.    \
                     {method_list[int(operation_input)]}()'
 

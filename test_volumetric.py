@@ -46,7 +46,7 @@ class UnitTests(unittest.TestCase):
 
     def test_volume(self):
         """ Check volume of every volumetric shape """
-        res = [4188.790204786391, 125, 120, 4.0,
+        res = [4188.790204786391, 125, 4.0, 120,
                141.3716694115407, 134.0412865531645]
         for ind, shape in enumerate(self.volumetric_examples):
             self.assertEqual(shape.volume(), res[ind],
@@ -55,7 +55,7 @@ class UnitTests(unittest.TestCase):
 
     def test_area(self):
         """ Check area of every volumetric shape"""
-        res = [1256.6370614359173, 150, 148, 1.8862680691608995,
+        res = [1256.6370614359173, 150, 1.8862680691608995,148,
                150.79644737231007, 449.5881427866065]
         for ind, shape in enumerate(self.volumetric_examples):
             self.assertEqual(shape.area(), res[ind],
