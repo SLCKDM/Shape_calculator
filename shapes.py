@@ -202,7 +202,6 @@ class Triangle(Flat):
     def perimeter(self):
         return self.a + self.b + self.c
 
-    @property
     def height(self):
         """ return height of the shape """
         p = self._p
@@ -331,29 +330,27 @@ class Pyramid(Volumetric):
         """ Return side length """
         return self.sides[0] if len(set(self.sides)) == 1 else None
 
-    @property
     def height(self):
         """ calculate and return height of the pyramid"""
         return math.sqrt(self.edge**2 - self.radius**2)
 
-    @property
     def apothem(self):
         """ calculate and return apothem of the pyramid"""
-        return math.sqrt(self.height+(self._a/(2*math.tan(180/self._n)))**2)
+        return math.sqrt(self.height()+(self._a/(2*math.tan(180/self._n)))**2)
 
     def volume(self):
         if self._n == 1:
             base = Square(self.sides[0])
-            return 1/3 * base.area() * self.height
+            return 1/3 * base.area() * self.height()
         elif self._n == 3:
             if self.sides[0] == self.sides[1] == self.sides[2]:
                 a = self.sides[0]
-                return (math.sqrt(3) * a**2 * self.height)/12
+                return (math.sqrt(3) * a**2 * self.height())/12
         elif (self._n == 6) and (len(set(self.sides)) == 1):
-            return (3 * math.sqrt(3) * self.sides[0] * self.height)/6
+            return (3 * math.sqrt(3) * self.sides[0] * self.height())/6
 
     def area(self):
-        return (self._n*self._a/2) * self.apothem
+        return (self._n*self._a/2) * self.apothem()
 
 
 class Cylinder(Volumetric):
@@ -407,7 +404,6 @@ class Cone(Volumetric):
         self.radius = radius
         self.height = height
 
-    @property
     def slant_height(self):
         return math.sqrt(self.radius**2 + self.height**2)
 
@@ -417,9 +413,9 @@ class Cone(Volumetric):
         __side = True to calculate side area
         """
         if _side:
-            return math.pi*self.radius*self.slant_height
+            return math.pi*self.radius*self.slant_height()
         else:
-            return math.pi*self.radius*(self.radius*self.slant_height)
+            return math.pi*self.radius*(self.radius*self.slant_height())
 
     def volume(self):
         return 1/3*math.pi*(self.radius**2)*self.height
