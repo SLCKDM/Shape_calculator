@@ -101,6 +101,9 @@ class Main():
                 print("Seems you entered something wrong, try again")
             except TypeError:
                 print('Looks like you entered too many/few arguments')
+            except ValueError:
+                print('Looks like you entered letter or word. Enter nuber')
+
             except AdventureDone:
                 break
 
